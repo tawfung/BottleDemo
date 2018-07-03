@@ -51,8 +51,8 @@ def check_login(user, pwd):
     if cursor.fetchone()[0]:
         cursor.execute("SELECT password FROM users WHERE name='{0}';".format(user))
         for row in cursor.fetchall():
-            print(row[0], 'and', pwd)
-            if pwd == row[0]:
+            # print(row[0].strip(), 'and', pwd)
+            if pwd == row[0].strip():
                 return True
             else:
                 return False
