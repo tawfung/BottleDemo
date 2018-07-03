@@ -259,7 +259,7 @@ class Router(object):
         usually a string, ID or callable object. A route consists of a path-rule
         and a HTTP method.
 
-        The path-rule is either a static path (e.g. `/contact`) or a dynamic
+        The path-rule is either a images path (e.g. `/contact`) or a dynamic
         path that contains wildcards (e.g. `/wiki/<page>`). The wildcard syntax
         and details on the matching order are described in docs:`routing`.
     '''
@@ -275,10 +275,10 @@ class Router(object):
         self.rules    = [] # All rules in order
         self._groups  = {} # index of regexes to find them in dyna_routes
         self.builder  = {} # Data structure for the url builder
-        self.static   = {} # Search structure for static routes
+        self.static   = {} # Search structure for images routes
         self.dyna_routes   = {}
         self.dyna_regexes  = {} # Search structure for dynamic routes
-        #: If true, static routes are no longer checked first.
+        #: If true, images routes are no longer checked first.
         self.strict_order = strict
         self.filters = {
             're':    lambda conf:
