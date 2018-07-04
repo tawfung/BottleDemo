@@ -4,7 +4,7 @@ TEMPLATE_PATH[:] = ['templates']
 HOST = 'localhost'
 
 @route('/', name='home')
-@jinja2_view('index.html')
+@jinja2_view('table.html')
 def server_hompage():
     return {'title': 'Hello'}
 
